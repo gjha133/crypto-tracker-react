@@ -1,4 +1,4 @@
-import { Container, Heading, HStack, Img, VStack, Text } from "@chakra-ui/react";
+import { Container, Heading, HStack, Img, VStack, Text, Tooltip } from "@chakra-ui/react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -56,6 +56,8 @@ const Exchanges = () => {
 
 
 const ExchangeCard = ({ name, img, rank, url, score }) => (
+    <Tooltip label={url.split('/')[2]}  placement='top' pos='absolute' top={'215px'} opacity='0.5' borderRadius={'10px'} openDelay='300' 
+    closeDelay={'300'}>
     <a href={url} target={'blank'}>
         <VStack 
             w='52'
@@ -81,6 +83,7 @@ const ExchangeCard = ({ name, img, rank, url, score }) => (
             <Text noOfLines={1} fontSize='14px' fontWeight={'medium'}>{`Rank: ${rank}`}</Text>
         </VStack>
     </a>
+    </Tooltip>
 )
 
 

@@ -4,7 +4,16 @@ import { Link } from "react-router-dom";
 const CoinCard = ({ id, name, img, symbol, price, currencySymbol = "₹" }) => (
         
     <Link to={`/coin/${id}`} position='relative'>
-        <Tooltip label='Click for details'  placement='top' pos='absolute' top={'215px'} opacity='0.5' borderRadius={'10px'}>
+        <Tooltip 
+            label='Click for stats' 
+            placement='top' 
+            pos='absolute' 
+            top={'220px'} 
+            opacity='0.5' 
+            borderRadius={'10px'} 
+            openDelay={'300'} 
+            closeDelay={'300'}
+        >
         <VStack
             w={"52"}
             shadow={"lg"}

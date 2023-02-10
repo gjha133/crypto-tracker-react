@@ -1,6 +1,7 @@
-import { Box, Stack, Text, VStack } from "@chakra-ui/react";
+import { Box, Stack, Text, Tooltip, VStack } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -30,7 +31,11 @@ const Footer = () => {
                         transform: 'scale(1.4)',
                     }
                 }}>
-                    <a href="https://github.com/gjha133" target="blank" >GitHub</a>
+                    <Tooltip label={'github.com/gjha133'}  fontSize='16px' placement='left' opacity='0.5' borderRadius={'10px'} openDelay='300' closeDelay={'300'}>
+                        <a href="https://github.com/gjha133" target="blank" >
+                            <FaGithub size={'35'} />
+                        </a>
+                    </Tooltip>
                 </VStack>
             </Stack>
         </Box>
